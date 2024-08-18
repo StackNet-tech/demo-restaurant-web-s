@@ -9,7 +9,7 @@ const bgMenu = {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     width: '100%',
-    height: '100vh',
+    height: '105vh',
 }
 
 export const Menu = () => {
@@ -34,21 +34,21 @@ export const Menu = () => {
           <div className='grid grid-cols-1 md:grid-cols-2'>
             <div className='flex gap-20 px-10'>
               <div className="flex flex-col justify-center items-center">
-                <img src={food1} alt="food1" className='w-3/4 mx-auto block max-w-[300px]'></img>
+                <img src={food1} alt="food1" className='w-3/4 mx-auto block max-w-[300px] hover:rotate-6 hover:scale-105 duration-300'></img>
                 <p className='text-white pt-0 mt-0'>Starters</p>
               </div>
               <div className="flex flex-col justify-center items-center">
-                <img src={food1} alt="food1" className='w-3/4 mx-auto block max-w-[300px]'></img>
+                <img src={food1} alt="food1" className='w-3/4 mx-auto block max-w-[300px] hover:rotate-6 hover:scale-105 duration-300'></img>
                 <p className='text-white pt-0 mt-0'>Main Courses</p>
               </div>
             </div>
             <div className='flex gap-20 px-10'>
               <div className="flex flex-col justify-center items-center">
-                <img src={food1} alt="food1" className='w-3/4 mx-auto block max-w-[300px]'></img>
+                <img src={food1} alt="food1" className='w-3/4 mx-auto block max-w-[300px] hover:rotate-6 hover:scale-105 duration-300'></img>
                 <p className='text-white pt-0 mt-0'>Desserts</p>
               </div>
               <div className="flex flex-col justify-center items-center">
-                <img src={food1} alt="food1" className='w-3/4 mx-auto block max-w-[300px]'></img>
+                <img src={food1} alt="food1" className='w-3/4 mx-auto block max-w-[300px] hover:rotate-6 hover:scale-105 duration-300'></img>
                 <p className='text-white pt-0 mt-0'>Drinks</p>
               </div> 
             </div>
