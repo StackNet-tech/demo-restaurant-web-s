@@ -4,7 +4,10 @@ import NavBar from './Component/NavBar';
 import Footer2 from './Component/Footer2';
 import Hero from './Component/Hero';
 import {Menu} from './Component/Menu';
+import Foods from './Component/Foods';
+
 import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 
 function App() {
@@ -13,7 +16,8 @@ function App() {
       <NavBar/>
       <Hero/>
       <Menu/>
-      <Footer2 />
+      <Foods/>
+      {/* <Footer2 /> */}
       
     </div>
   );
