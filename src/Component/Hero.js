@@ -13,13 +13,13 @@ const Hero = () => {
     return (
     <>
     <div style={bgHome}
-    className="min-h-[550px] sm:min-h-[600px] 
+    className="min-h-[550px] md:min-h-[600px] 
     duration-200 flex justify-center items-center">
-        <div className="container pb-8 sm:pb-0">
-            <div className='grid grid-cols-1 sm:grid-cols-2'>
+        <div className="container pb-8 md:pb-0">
+            <div className='grid grid-cols-1 md:grid-cols-2'>
 
                 <div className="flex flex-col
-                justify-center gap-4 pt-1 pl-10 pr-12">
+                justify-center gap-4 pt-1 pl-10 pr-12 ">
 
                     <img src={title} alt="title"
                     className='w-2/4 -mt-55 '/>
