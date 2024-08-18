@@ -1,9 +1,8 @@
-
+import React from 'react';
 import './App.css';
 import NavBar from './Component/NavBar';
-import React from 'react';
-// import About from './Component/About';
 import Footer2 from './Component/Footer2';
+import Hero from './Component/Hero';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
@@ -11,7 +10,10 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
+      <Hero/>
+      <Menu/>
       <Footer2 />
+      
     </div>
   );
 }

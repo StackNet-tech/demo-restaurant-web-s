@@ -18,7 +18,7 @@ function classNames(...classes) {
 
 export default function NavBar() {
   return (
-    <Disclosure as="nav" className="bg-gray-700 sticky top-0 w-full z-10">
+    <Disclosure as="nav" className="bg-gray-1000/70 backdrop-blur-md sticky top-0 w-full z-10">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
