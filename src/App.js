@@ -1,15 +1,24 @@
-
+import React from 'react';
 import './App.css';
-// import About from './Component/About';
+import NavBar from './Component/NavBar';
 import Footer2 from './Component/Footer2';
+import Hero from './Component/Hero';
+import {Menu} from './Component/Menu';
+import Foods from './Component/Foods';
+
 import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 
 function App() {
   return (
     <div className="App">
-    
-      <Footer2 />
+      <NavBar/>
+      <Hero/>
+      <Menu/>
+      <Foods/>
+      {/* <Footer2 /> */}
+      
     </div>
   );
 }
