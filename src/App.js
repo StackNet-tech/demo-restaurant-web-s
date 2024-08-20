@@ -7,6 +7,7 @@ import {Menu} from './Component/Menu';
 import Foods from './Component/Foods';
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import About from './Component/About';
 
 
 
@@ -17,7 +18,8 @@ function App() {
       <Hero/>
       <Menu/>
       <Foods/>
-      {/* <Footer2 /> */}
+      <About />
+      <Footer2 />
       
     </div>
   );
