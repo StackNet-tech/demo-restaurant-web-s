@@ -4,6 +4,7 @@ import contactbg from "../assests/footer/Rectangle25.png";
 
 const Footer = () => {
   return (
+    <section id="footer">
     <footer className="relative bg-cover bg-center" style={{ backgroundImage: `url(${contactbg})` }}>
          <div className=" relative bg-black bg-opacity-0 p-10">
 
@@ -77,6 +78,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </section>
   );
 };
 
