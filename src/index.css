@@ -27,3 +27,8 @@ code {
   scrollbar-width: none;  /* Firefox */
 }
 
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
