@@ -32,3 +32,22 @@ code {
     @apply scroll-smooth;
   }
 }
+
+::-webkit-scrollbar {
+  width: 12px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b5651d; 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #b5651d #252525;
+}
