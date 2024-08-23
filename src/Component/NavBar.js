@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navigation = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'Menu', href: '#', current: false },
-  { name: 'About', href: '#', current: false },
-  { name: 'Accommodation', href: '#', current: false },
-  { name: 'Facilities', href: '#', current: false },
-  { name: 'Events', href: '#', current: false },
-  { name: 'Contract', href: '#', current: false },
+  { name: 'Home', href: '#home' },
+  { name: 'Menu', href: '#menu' },
+  { name: 'About', href: '#about' },
+  { name: 'Accommodation', href: '#accommodation' },
+  { name: 'Facilities', href: '#facilities' },
+  { name: 'Events', href: '#events' },
+  { name: 'Contract', href: '#footer' },
 ];
 
 function classNames(...classes) {
@@ -17,13 +17,15 @@ function classNames(...classes) {
 }
 
 export default function NavBar() {
+  const [currentPage, setCurrentPage] = useState('#home'); // default to 'Home'
+
   return (
     <Disclosure as="nav" className="bg-gray-1000/70 backdrop-blur-md sticky top-0 w-full z-10">
       <div className="mx-auto max-w-7xl px-2 sm:px-4 lg:px-4 2xl:px-4">
         <div className="relative flex h-16 items-center justify-between">
           <div className="flex flex-1 items-center justify-start sm:items-stretch">
-            <div className="flex flex-shrink-0 items-center ml-10  md:ml-0">
-              <p className='text-white text-3xl font-bold'>Grill&Chill</p>
+            <div className="flex flex-shrink-0 items-center ml-10 md:ml-0">
+              <p className="text-white text-3xl font-bold">Grill&Chill</p>
             </div>
           </div>
           <div className="hidden sm:ml-6 sm:block">
@@ -32,9 +34,12 @@ export default function NavBar() {
                 <a
                   key={item.name}
                   href={item.href}
-                  aria-current={item.current ? 'page' : undefined}
+                  aria-current={item.href === currentPage ? 'page' : undefined}
+                  onClick={() => setCurrentPage(item.href)}
                   className={classNames(
-                    item.current ? 'bg-yellow-900 text-white' : 'text-gray-300 hover:bg-yellow-700 hover:text-white',
+                    item.href === currentPage
+                      ? 'bg-yellow-900 text-white'
+                      : 'text-gray-300 hover:bg-yellow-700 hover:text-white',
                     'rounded-md px-3 py-2 text-sm font-semibold',
                   )}
                 >
@@ -62,9 +67,12 @@ export default function NavBar() {
               key={item.name}
               as="a"
               href={item.href}
-              aria-current={item.current ? 'page' : undefined}
+              aria-current={item.href === currentPage ? 'page' : undefined}
+              onClick={() => setCurrentPage(item.href)}
               className={classNames(
-                item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                item.href === currentPage
+                  ? 'bg-gray-900 text-white'
+                  : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                 'block rounded-md px-3 py-2 text-base font-medium',
               )}
             >

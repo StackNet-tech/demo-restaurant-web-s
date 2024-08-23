@@ -23,14 +23,14 @@ const Facilities = () => {
         </p>
         
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-black bg-opacity-50 p-6 rounded-lg">
+          <div className="bg-black p-6 rounded-lg h-80">
             <h2 className="text-3xl mb-4">Main Dining Room</h2>
             <p className="text-lg mb-6">
               Spacious and elegantly designed, ideal for both casual and formal dining.
             </p>
             <button className="text-black bg-white py-2 px-4 rounded">View</button>
           </div>
-          <div className="bg-black bg-opacity-50 p-6 rounded-lg">
+          <div className="bg-black p-6 rounded-lg h-80">
             <h2 className="text-3xl mb-4">Private Rooms</h2>
             <p className="text-lg mb-6">
               Perfect for intimate gatherings and special events.

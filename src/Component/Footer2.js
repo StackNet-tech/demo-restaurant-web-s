@@ -4,33 +4,11 @@ import contactbg from "../assests/footer/Rectangle25.png";
 
 const Footer = () => {
   return (
+    <section id="footer">
     <footer className="relative bg-cover bg-center" style={{ backgroundImage: `url(${contactbg})` }}>
-   <div className="bg-cover bg-center" style={{ backgroundImage: `url(${contactbg})` }}>
-        <div className="flex justify-between items-center py-4 pr-24">
-          <div className="flex justify-end w-full ">
-            <ul className="flex space-x-4">
-              <li>
-                <a href="#" className="text-white">Home</a>
-              </li>
-              <li>
-                <a href="#" className="text-white">Menu</a>
-              </li>
-              <li>
-                <a href="#" className="text-white">Service</a>
-              </li>
-              <li>
-                <a href="#" className="text-white">About</a>
-              </li>
-              <li>
-                <a href="#" className="text-white">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div className=" relative bg-black bg-opacity-60 p-10">
+         <div className=" relative bg-black bg-opacity-0 p-10">
 
-        <div className="container mx-auto text-white flex flex-col lg:flex-row justify-between">
+         <div className="container mx-auto text-white flex flex-col lg:flex-row justify-between">
         
           
           <div className="lg:w-1/2 mb-8 lg:mb-0 ">
@@ -38,7 +16,7 @@ const Footer = () => {
             <p className="mb-4">
               We'd love to hear from you! Whether you have questions, need assistance, or want to make a reservation, feel free to get in touch.
             </p>
-            <div className="mb-4">
+            <div className="mb-4 relative pb-[65%] h-0 overflow-hidden max-w-full">
             <iframe
                 width="455"
                 height="300"
@@ -100,6 +78,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </section>
   );
 };
 

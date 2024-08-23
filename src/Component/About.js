@@ -4,7 +4,9 @@ import aboutbg from "../assests/about/aboutBG.png";
 
 const About = () => {
   return (
-    <section style={{ backgroundImage: `url(${aboutbg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: 'transparent' }}
+
+    <section id="about" style={{ backgroundImage: `url(${aboutbg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: 'transparent' }}
+
       className="min-h-screen p-4 text-slate-50">
       <div className='ml-20 pb-8 md:pb-8 mt-20'>
 
