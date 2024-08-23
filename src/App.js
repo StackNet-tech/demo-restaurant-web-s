@@ -7,6 +7,9 @@ import {Menu} from './Component/Menu';
 import Foods from './Component/Foods';
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import About from './Component/About';
+import Facilities from './Component/Facilities';
+import Events from './Component/Events';
 
 
 
@@ -17,7 +20,10 @@ function App() {
       <Hero/>
       <Menu/>
       <Foods/>
-      {/* <Footer2 /> */}
+      <Facilities/>
+      <Events/>
+      <About/>
+      <Footer2 />
       
     </div>
   );
