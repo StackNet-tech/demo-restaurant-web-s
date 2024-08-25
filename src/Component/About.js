@@ -1,7 +1,6 @@
 import React from 'react'
 import aboutbg from "../assests/about/aboutBG.png";
 
-
 const About = () => {
   return (
 
