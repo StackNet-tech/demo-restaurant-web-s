@@ -1,8 +1,44 @@
-import React from "react";
-
+import React, { useState } from "react";
 import contactbg from "../assests/footer/Rectangle25.png";
+import emailjs from "emailjs-com";
 
 const Footer = () => {
+  const  [name,setName] = useState('');
+  const  [email,setEmail] = useState('');
+  const [phone,setPhone] = useState('');
+  const [date, setdate] = useState('');
+  const [specialRequest, setSpecialRequest] = useState('');
+  const [guests, setGuests] = useState('');
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const serviceId = "service_9wyobbz";
+    const templateId = "template_y4kycio";
+    const publicKey = "2sKCFTeUuGfgZ5HPJ";
+
+    const templateParams = {
+      from_name: name,
+      from_email:email,
+      from_phone:phone,
+      input_date:date,
+      special_request:specialRequest,
+      no_of_guests:guests,
+    };
+
+    emailjs.send(serviceId, templateId, templateParams, publicKey).then(
+      (response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        alert("Thank you for contacting us. We will get back to you shortly.")
+        console.log("Form submitted");
+        console.log({ name, email, phone, date, specialRequest, guests });
+      },
+      (error) => {
+        console.log("FAILED...", error);
+      }
+    )
+  }
+
   return (
     <section id="footer">
     <footer className="relative bg-cover bg-center" style={{ backgroundImage: `url(${contactbg})` }}>
@@ -45,30 +81,30 @@ const Footer = () => {
           
           <div className="lg:w-1/2 bg-gray-900 bg-opacity-75 p-6 rounded-lg">
             <h3 className="text-2xl mb-4 font-semibold">Please fill out the form below to make a reservation, and our team will get back to you shortly</h3>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label className="block text-sm font-bold mb-2" htmlFor="name">Name</label>
-                <input className="w-full px-3 py-2 text-black" id="name" type="text" placeholder="Name" />
+                <input className="w-full px-3 py-2 text-black" id="name" type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)}/>
               </div>
               <div className="mb-4">
                 <label className="block text-sm font-bold mb-2" htmlFor="email">Email</label>
-                <input className="w-full px-3 py-2 text-black" id="email" type="email" placeholder="Email" />
+                <input className="w-full px-3 py-2 text-black" id="email" type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
               </div>
               <div className="mb-4">
                 <label className="block text-sm font-bold mb-2" htmlFor="phone">Phone No</label>
-                <input className="w-full px-3 py-2 text-black" id="phone" type="text" placeholder="Phone No" />
+                <input className="w-full px-3 py-2 text-black" id="phone" type="text" placeholder="Phone No" value={phone} onChange={(e) => setPhone(e.target.value)} />
               </div>
               <div className="mb-4">
                 <label className="block text-sm font-bold mb-2" htmlFor="datetime">Date & Time</label>
-                <input className="w-full px-3 py-2 text-black" id="datetime" type="datetime-local" />
+                <input className="w-full px-3 py-2 text-black" id="datetime" type="datetime-local" value={date} onChange={(e) => setdate(e.target.value)} />
               </div>
               <div className="mb-4">
                 <label className="block text-sm font-bold mb-2" htmlFor="guests">Number Of Guests</label>
-                <input className="w-full px-3 py-2 text-black" id="guests" type="number" placeholder="Number Of Guests" />
+                <input className="w-full px-3 py-2 text-black" id="guests" type="number" placeholder="Number Of Guests" value={guests} onChange={(e) => setGuests(e.target.value)} />
               </div>
               <div className="mb-4">
                 <label className="block text-sm font-bold mb-2" htmlFor="requests">Special Requests</label>
-                <textarea className="w-full px-3 py-2 text-black" id="requests" placeholder="Special Requests"></textarea>
+                <textarea className="w-full px-3 py-2 text-black" id="requests" placeholder="Special Requests" value={specialRequest} onChange={(e) => setSpecialRequest(e.target.value)}></textarea>
               </div>
               <div className="text-right">
                 <button className="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded" type="submit">Submit</button>
