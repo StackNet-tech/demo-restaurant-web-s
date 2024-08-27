@@ -14,7 +14,7 @@ import About from './Component/About';
 function App() {
   return (
     <div className="App">
-      <NavBar/>
+      <NavBar className="absolute top-0 left-0 w-full z-10"/>
       <Hero/>
       <Menu/>
       <Foods/>

@@ -14,7 +14,7 @@ const Hero = () => {
     <>
     <div style={bgHome}
     className="min-h-[550px] md:min-h-[600px] 
-    duration-200 flex justify-center items-center">
+    duration-200 flex justify-center items-center -mt-[64px]">
         <div className="container pb-8 md:pb-0">
             <div className='grid grid-cols-1 md:grid-cols-2'>
 
